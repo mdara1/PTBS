@@ -3,11 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.*;
 
-/**
- * SER-515 Facade class to take care of the facade pattern it calls the classes
- * for bridge pattern, factory pattern, visitor pattern, iterator pattern
- *
- */
+
 
 public class Facade {
 	int userType;
