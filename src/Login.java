@@ -6,11 +6,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
- * SER-515 Login class implementing the implementation for login using facade
- * class
- *
- */
+
 public class Login {
 	int userType;
 	String buyerInfoPath = new File("src/resources/BuyerInfo.txt")

@@ -4,13 +4,6 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-/**
- * SER-515 Course List class to implement the iterator pattern 
- * 
-
- */
-@SuppressWarnings("rawtypes")
 public class ProductList extends Reminder {
 
 	List<Product> theProductList = new ArrayList<>();

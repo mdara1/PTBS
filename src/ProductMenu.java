@@ -1,8 +1,3 @@
-/**
- * SER-515 abstract Course Menu class 
- * 
-
- */
 public abstract class ProductMenu {
 
 	public abstract void ShowAddButtons();

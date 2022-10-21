@@ -1,8 +1,3 @@
-/**
- * SER-515 Reminder Visitor class responsible for implementing visitor pattern
- * 
-
- */
 public class ReminderVisitor extends NodeVisitor {
 	String m_Reminder;
 

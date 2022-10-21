@@ -1,8 +1,3 @@
-/**
- * SER-515 Seller class to inherit person class
- * 
-
- */
 public class Seller extends Person {
 	Seller() {
 		super(theProductMenu);

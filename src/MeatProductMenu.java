@@ -4,11 +4,6 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * SER-515 MeatProductMenu responsible for bridge pattern and factory pattern
- * 
-
- */
 public class MeatProductMenu extends ProductMenu {
 
 	List<Product> meatProductList;

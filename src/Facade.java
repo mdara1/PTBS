@@ -5,20 +5,16 @@ import java.util.*;
 
 
 public class Facade {
-	int userType;
-	int nProductCategory;
 	List<Product> theProductList = new ArrayList<>();
+	int userType, nProductCategory;
 	Person thePerson;
-
-	public void startFacade() {
-		System.out.println("Facade pattern started \n");
-		createProductList(); // adding products to the map
+	public void runFacade() {
+		createProductList();
 		userType = login(new Login());
 		System.out.println(
-				"Please pick a number to choose from available Product Menus \n 1. MeatProduct Menu \n 2. ProduceProduct Menu ");
+				"Enter a number to choose from below available Product Menus \n 1. MeatProduct Menu \n 2. ProduceProduct Menu ");
 		Scanner scan = new Scanner(System.in);
 		nProductCategory = scan.nextInt();
-		// pattern implemented (Bridge implementation and Factory implementation)
 		if (nProductCategory == 1 || nProductCategory == 2) {
 			System.out.println("Factory pattern implemented");
 			System.out.println("Please select a number to select a product :");

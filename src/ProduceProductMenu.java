@@ -3,12 +3,6 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * SER-515 ProduceProductMenu responsible for bridge patterns and factory pattern
- * 
-
- */
 public class ProduceProductMenu extends ProductMenu {
 
 	List<Product> produceProductList;
