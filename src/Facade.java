@@ -5,16 +5,20 @@ import java.util.*;
 
 
 public class Facade {
+	int userType;
+	int nProductCategory;
 	List<Product> theProductList = new ArrayList<>();
-	int userType, nProductCategory;
 	Person thePerson;
-	public void runFacade() {
-		createProductList();
+
+	public void startFacade() {
+		System.out.println("Facade pattern started \n");
+		createProductList(); // adding products to the map
 		userType = login(new Login());
 		System.out.println(
-				"Enter a number to choose from below available Product Menus \n 1. MeatProduct Menu \n 2. ProduceProduct Menu ");
+				"Please pick a number to choose from available Product Menus \n 1. MeatProduct Menu \n 2. ProduceProduct Menu ");
 		Scanner scan = new Scanner(System.in);
 		nProductCategory = scan.nextInt();
+		// pattern implemented (Bridge implementation and Factory implementation)
 		if (nProductCategory == 1 || nProductCategory == 2) {
 			System.out.println("Factory pattern implemented");
 			System.out.println("Please select a number to select a product :");
@@ -22,6 +26,22 @@ public class Facade {
 			System.out.println("Selected Product is:" + selectProduct.getProductName());
 			System.out.println("Implementing Visitor Pattern....");
 			remind();
+			System.out.println("Implementing Iterator pattern ....");
+			ProductList productList = new ProductList();
+			@SuppressWarnings("rawtypes")
+			Iterator iterate = (Iterator) productList.createIterator();
+			ProductIterator productIterator = new ProductIterator();
+			OfferingList offeringList = new OfferingList();
+			@SuppressWarnings("rawtypes")
+			Iterator iterate2 = (Iterator) offeringList.createIterator();
+			OfferingIterator offeringIterator = new OfferingIterator();
+			while (productIterator.HasNext(iterate)) {
+				System.out.println(productIterator.Next(iterate).getProductName());
+			}
+			while (offeringIterator.HasNext(iterate)) {
+				System.out.println(offeringIterator.Next(iterate));
+			}
+			scan.close();
 		} else {
 			System.out.println("Wrong Selection");
 			System.exit(-1);

@@ -1,3 +1,5 @@
+
+
 public class Trading extends Reminder {
 
 	public Reminder accept(NodeVisitor nodeVisitor) {

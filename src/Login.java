@@ -73,15 +73,10 @@ public class Login {
 			System.out.println("Welcome" + username);
 			userType = 1;
 		}
-		else if ((username.equalsIgnoreCase("Student")) && (password.equalsIgnoreCase(password))) {
-			System.out.println("Welcome Student ");
-			userType = 0;
-		}
 		else{
 			System.out.println("sorry , invalid credentials. Please start the program and try again");
 			System.exit(-1);
 		}
-
 		return userType;
 
 	}

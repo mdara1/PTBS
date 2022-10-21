@@ -4,6 +4,7 @@ import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
 public class ProductList extends Reminder {
 
 	List<Product> theProductList = new ArrayList<>();
@@ -46,6 +47,9 @@ public class ProductList extends Reminder {
 	}
 
 
+	public Iterator createIterator() {
+		return this.theProductList.iterator();
+	}
 
 	public Reminder accept(NodeVisitor nodeVisitor) {
 		System.out.println("Product List Reminder ...");
